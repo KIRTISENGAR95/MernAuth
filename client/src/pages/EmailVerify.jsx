@@ -47,11 +47,12 @@ const EmailVerify = () => {
       const otp = otpArray.join('');
       console.log('Submitting OTP:', otp);
 
-      if (!userData?.id) {
-        toast.error('Please login first');
-        navigate('/login');
-        return;
-      }
+      console.log(userData)
+      // if (!userData?.id) {
+      //   toast.error('Please login first');
+      //   navigate('/login');
+      //   return;
+      // }
       
       console.log('Making API call with:', {
         userId: userData.id,
